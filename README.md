@@ -40,7 +40,7 @@ If you want to use 443 port, you have to run with sudo or run with root permissi
 sudo meteor run -p 3000
 ~~~
 
-### 5. Access to https URL use your browser. (https://localhost)
+### 5. Access to https URL use your browser. (https://localhost:8443)
 
 ## Environment variables description
 
