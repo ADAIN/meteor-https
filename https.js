@@ -31,7 +31,7 @@ if(process.env.USE_HTTPS !== undefined && process.env.USE_HTTPS === '1')
     TARGET_PORT = process.env.SSL_TARGET_PORT;
   }
 
-  if(process.env.NEVER_DIE !== undefined && process.env.NERVER_DIE === '1'){
+  if(process.env.NEVER_DIE !== undefined && process.env.NEVER_DIE === '1'){
     process.on('uncaughtException', function (err) {
       console.log((new Date()).toString() + ', Caught exception: ' + err);
     });
