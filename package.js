@@ -1,6 +1,6 @@
 Package.describe({
   name: 'adain:meteor-https',
-  version: '1.0.1',
+  version: '1.0.2',
   summary: 'Simple https proxy server package for meteor using npm http-proxy',
   git: 'https://github.com/ADAIN/meteor-https.git',
   documentation: 'README.md'
@@ -9,7 +9,7 @@ Package.describe({
 Npm.depends({'http-proxy' : '1.9.0'});
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0.1');
+  api.versionsFrom('1.0.2');
   api.addFiles('https.js');
 });
 
