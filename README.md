@@ -53,7 +53,9 @@ https://localhost:8443
 
     USE_HTTPS : 1 = USE, 0 = NOT USE
     SSL_KEY_PATH : SSL Key file path (default server.key)
+    SSL_KEY_PASS : SSL Key file password (optional)
     SSL_CERT_PATH : SSL Certificate file path (default cert.pem)
+    SSL_CA_PATH : ca file password (optional)
     SSL_PORT : SSL Port (default 8443)
     SSL_TARGET_IP : Meteor server ip address or host (default 127.0.0.1)
     SSL_TARGET_PORT : Meteor server port (default 3000)
