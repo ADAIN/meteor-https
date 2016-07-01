@@ -9,14 +9,7 @@
 
 ### 1. Add package
 ~~~shell
-meteor add adain:https
-~~~
-
-#### OPTIONAL
-If you want to use force-ssl, you have to set the ROOT_URL.
-~~~shell
-meteor add force-ssl
-export ROOT_URL=https://localhost:8443
+meteor add adain:meteor-https
 ~~~
 
 ### 2. You have to make your ssl certificate and key file. If you already have these, you can skip this step.
@@ -34,6 +27,7 @@ export SSL_CERT_PATH=cert.pem
 export SSL_PORT=8443
 export SSL_TARGET_IP=127.0.0.1
 export SSL_TARGET_PORT=3000
+export FORCE_SSL=1
 ~~~
 
 ### 4. Run meteor with environment variables.
@@ -60,4 +54,5 @@ https://localhost:8443
     SSL_TARGET_IP : Meteor server ip address or host (default 127.0.0.1)
     SSL_TARGET_PORT : Meteor server port (default 3000)
     NEVER_DIE : (OPTIONAL) 1 = USE, 0 = NOT USE (If this is variable set to 1 the meteor process never die.)
+    FORCE_SSL : If client request from http, redirect to https (http://localhost:3000 => https://localhost:8443)
 
