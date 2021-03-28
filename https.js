@@ -81,5 +81,12 @@ if(process.env.USE_HTTPS !== undefined && process.env.USE_HTTPS === '1')
   console.log("SSL_TARGET_PORT : " + TARGET_PORT);
   console.log("---------------------------------------");
 
-  httpProxy.createProxyServer(options).listen(SSL_PORT);
+  const proxy = httpProxy.createProxyServer(options).listen(SSL_PORT);
+  proxy.on('error', (err, req, res) => {
+    res.writeHead(500, {
+      'Content-Type': 'text/plain'
+    });
+
+    res.end('Something went wrong. And we are reporting a custom error message.');
+  });
 }

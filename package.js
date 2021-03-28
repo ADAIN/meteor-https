@@ -1,6 +1,6 @@
 Package.describe({
   name: 'adain:meteor-https',
-  version: '1.1.0',
+  version: '1.1.1',
   summary: 'Simple https proxy server package for meteor using npm http-proxy',
   git: 'https://github.com/ADAIN/meteor-https.git',
   documentation: 'README.md'

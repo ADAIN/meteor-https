@@ -26,9 +26,9 @@ if(process.env.FORCE_SSL === "1"){
       var urlParts = url.parse(Meteor.absoluteUrl());
       var location;
       if(parseInt(process.env.SSL_PORT, 10) !== 443){
-        location = 'https://' + urlParts.hostname + ":" + process.env.SSL_PORT + urlParts.path;
+        location = 'https://' + urlParts.hostname + ":" + process.env.SSL_PORT + req.url;
       }else{
-        location = 'https://' + urlParts.hostname + urlParts.path;
+        location = 'https://' + urlParts.hostname + req.url;
       }
       res.writeHead(302, {
         'Location': location,
